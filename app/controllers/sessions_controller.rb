@@ -37,10 +37,24 @@ class SessionsController < Devise::SessionsController
   end
 
   def log_out_success
-    render json: { message: "You are logged out." }, status: :ok
+    render json: {
+      status: 200,
+      body: {
+        message: "Successfully logged out.",
+        logged_in: false
+      },
+      errors: nil
+    }
   end
 
   def log_out_failure
-    render json: { message: "Hmm nothing happened."}
+    render json: { 
+      status: 500,
+      body: {
+        message: nil,
+        logged_in: true
+      },
+      errors: "Internal server error"
+    }
   end
 end
