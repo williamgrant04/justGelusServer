@@ -8,7 +8,10 @@ Rails.application.routes.draw do
                controllers: {
                  sessions: 'sessions'
                }
-  
+  devise_scope :user do
+    get "/logged_in" => "sessions", action: :logged_in?
+  end
+
   # #* Services
   # get '/services/index',     to: 'services#index'
   # get '/services/show',      to: 'services#show'
