@@ -59,7 +59,7 @@ class ServicesController < ApplicationController
 
   def update
     @service =  Service.find(service_params[:id])
-    @service.apply_attributes(service_params)
+    @service.assign_attributes(service_params)
 
     if @service.save!
       render json: {
