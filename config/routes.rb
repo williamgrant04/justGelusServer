@@ -12,12 +12,12 @@ Rails.application.routes.draw do
     get "/logged_in" => "sessions", action: :logged_in?
   end
 
-  # #* Services
-  # get '/services/index',     to: 'services#index'
-  # get '/services/show',      to: 'services#show'
-  # post '/services/create',   to: 'services#create'
-  # patch '/services/update',  to: 'services#update'
-  # delete '/services/delete', to: 'services#delete'
+  #* Services
+  get '/services/index',     to: 'services#index'
+  get '/services/show',      to: 'services#show'
+  post '/services/create',   to: 'services#create'
+  patch '/services/update',  to: 'services#update'
+  delete '/services/delete', to: 'services#delete'
 
   #* Clients
   get '/clients/index',      to: 'clients#index'
