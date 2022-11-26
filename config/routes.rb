@@ -19,12 +19,12 @@ Rails.application.routes.draw do
   # patch '/services/update',  to: 'services#update'
   # delete '/services/delete', to: 'services#delete'
 
-  # #* Clients
-  # get '/clients/index',      to: 'clients#index'
-  # get '/clients/show',       to: 'clients#show'
-  # post '/clients/create',    to: 'clients#create'
-  # patch '/clients/update',   to: 'clients#update'
-  # delete '/clients/destroy', to: 'clients#destroy'
+  #* Clients
+  get '/clients/index',      to: 'clients#index'
+  get '/clients/show',       to: 'clients#show'
+  post '/clients/create',    to: 'clients#create'
+  patch '/clients/update',   to: 'clients#update'
+  delete '/clients/destroy', to: 'clients#destroy'
 
   #* Appointments
   get '/appointments/index',      to: 'appointments#index'
