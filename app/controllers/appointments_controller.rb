@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
   end
 
   def show
-    @appointment = Appointment.find(appointment_params[:id])
+    @appointment = Appointment.find(params[:id])
 
     render json: {
       status: 200,
@@ -95,11 +95,10 @@ class AppointmentsController < ApplicationController
       }
     end
   end
-end
 
   private
 
   def appointment_params
-    params.require(:appointment).permit(:name, :apt_date_time, :at_home, :archived, :client_id, :service_ids, :id)
+    params.require(:appointment).permit(:name, :appt_date_time, :at_home, :archived, :client_id, :service_ids, :id)
   end
 end

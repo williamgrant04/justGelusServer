@@ -12,7 +12,7 @@ class ClientsController < ApplicationController
   end
 
   def show
-    @client = Client.find(client_params[:id])
+    @client = Client.find(params[:id])
 
     if @client 
       render json: {

@@ -1,11 +1,2 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  appt_date_time: 2022-11-24
-  at_home: false
-
-two:
-  name: MyString
-  appt_date_time: 2022-11-24
-  at_home: false
